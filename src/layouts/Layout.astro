@@ -31,7 +31,9 @@ const { title } = Astro.props;
 			</ul>
 		</nav>
 
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 
 </html>
@@ -44,7 +46,10 @@ const { title } = Astro.props;
 	@tailwind utilities;
 
 	html {
-		@apply font-regular bg-stone-100;
+		@apply font-regular bg-stone-100 leading-loose;
+	}
+	main {
+		@apply mx-auto py-12 px-20;
 	}
 	nav {
 		@apply px-20 pt-8 pb-6;
@@ -61,7 +66,7 @@ const { title } = Astro.props;
 			}
 		}
 	}
-	a {
-
+	p {
+		@apply mb-4;
 	}
 </style>

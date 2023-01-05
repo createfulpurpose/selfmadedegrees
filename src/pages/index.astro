@@ -4,28 +4,23 @@ import SubjectCard from '../components/SubjectCard.astro';
 ---
 
 <Layout title="Home">
-	<main>
-		<div id="subject-card-wrapper">
-			<SubjectCard
-				title="General Education"
-				href="/general-education"
-				imgSrc="https://cdn.pixabay.com/photo/2015/07/31/11/45/library-869061_1280.jpg"
-				programs={[]}
-			/>
-			<SubjectCard
-				title="Computers & Information Technology"
-				href="/cit"
-				imgSrc="https://cdn.pixabay.com/photo/2015/06/24/15/45/hands-820272_1280.jpg"
-				programs={["BS"]}
-			/>
-		</div>
-	</main>
+	<div id="subject-card-wrapper">
+		<SubjectCard
+			title="General Education"
+			href="/general-education"
+			imgSrc="https://cdn.pixabay.com/photo/2015/07/31/11/45/library-869061_1280.jpg"
+			programs={[]}
+		/>
+		<SubjectCard
+			title="Computers & Information Technology"
+			href="/cit"
+			imgSrc="https://cdn.pixabay.com/photo/2015/06/24/15/45/hands-820272_1280.jpg"
+			programs={["BS"]}
+		/>
+	</div>
 </Layout>
 
 <style>
-	main {
-		@apply mx-auto py-12 px-20;
-	}
 	#subject-card-wrapper {
 		@apply grid grid-cols-3 gap-6;
 	}
