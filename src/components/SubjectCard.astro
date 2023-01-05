@@ -1,0 +1,45 @@
+---
+export interface Props {
+	title: string;
+	imgSrc: string;
+	href: string;
+	programs: Array<string>;
+}
+
+const { href, title, imgSrc, programs } = Astro.props;
+---
+<a href={`/s${href}`} class={`subject-card`}>
+	<img src={imgSrc} />
+	<div class="subject-card-content">
+		<h2>
+			{title}
+		</h2>
+		<div class="subject-card-badges">
+			{programs.map(pro => <span>{pro}</span>)}
+		</div>
+	</div>
+</a>
+
+<style>
+	.subject-card {
+		@apply duration-700 bg-white rounded-lg;
+		&:hover {
+			@apply drop-shadow-lg;
+		}
+		img {
+			@apply rounded-t-lg;
+		}
+		.subject-card-content {
+			@apply py-8 px-10 grid place-items-center;
+			h2 {
+				@apply text-2xl text-center;
+			}
+			.subject-card-badges {
+				@apply mt-2 space-x-2;
+				span {
+					@apply text-xs uppercase rounded-full bg-stone-500 text-white py-1 px-4;
+				}
+			}
+		}
+	}
+</style>
