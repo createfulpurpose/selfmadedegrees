@@ -17,4 +17,14 @@ const {frontmatter} = Astro.props;
             @apply text-4xl mb-6;
         }
     }
+    @media(max-width: theme("screens.md")) {
+        article {
+            @apply w-5/6;
+        }
+    }
+    @media(max-width: theme("screens.sm")) {
+        article {
+            @apply w-full;
+        }
+    }
 </style>
