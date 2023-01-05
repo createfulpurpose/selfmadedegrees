@@ -63,11 +63,23 @@ const { title } = Astro.props;
 				&:hover {
 					@apply border-stone-500;
 				}
+				a {
+					@apply border-0;
+					&:hover {
+						@apply bg-stone-100;
+					}
+				}
 			}
 		}
 	}
 	p {
 		@apply mb-4;
+	}
+	a {
+		@apply pb-1 duration-700 border-b border-stone-500 text-stone-700;
+		&:hover {
+			@apply border-stone-900 bg-stone-200;
+		}
 	}
 	@media(max-width: theme('screens.md')) {
 		main,
