@@ -1,4 +1,6 @@
 ---
+import { Plausible } from 'astro-analytics';
+
 export interface Props {
 	title: string;
 }
@@ -13,23 +15,83 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{title} | Self-Made Degrees</title>
+
+		<Plausible domain="selfmadedegrees.org" src="https://cplausible.server.createfulpurpose.com/js/script.js" />
 	</head>
+
 	<body>
-		<slot />
+		<nav>
+			<ul>
+				<li>
+					<a id="logo" href="/">Self-Made Degrees</a>
+				</li>
+				<li>
+					<a href="/about">About</a>
+				</li>
+			</ul>
+		</nav>
+
+		<main>
+			<slot />
+		</main>
 	</body>
+
 </html>
+
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
+	@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		@apply font-regular bg-stone-100 leading-loose;
 	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+	main {
+		@apply mx-auto pt-16 pb-12 px-20;
+	}
+	nav {
+		@apply px-20 pt-8 pb-6 bg-white;
+		#logo {
+			@apply font-semibold;
+		}
+		ul {
+			@apply space-x-6;
+			li {
+				@apply inline-block border-b-2 border-white duration-700;
+				&:hover {
+					@apply border-stone-500;
+				}
+				a {
+					@apply border-0 text-black;
+					&:hover {
+						@apply bg-white;
+					}
+				}
+			}
+		}
+	}
+	p {
+		@apply mb-4;
+	}
+	a {
+		@apply pb-1 duration-700 border-b border-stone-500 text-stone-700;
+		&:hover {
+			@apply border-stone-900 bg-stone-200;
+		}
+	}
+	@media(max-width: theme('screens.md')) {
+		main,
+		nav {
+			@apply px-12 py-6;
+		}
+	}
+	@media(max-width: theme('screens.sm')) {
+		main,
+		nav {
+			@apply px-6;
+		}
 	}
 </style>
