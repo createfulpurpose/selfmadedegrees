@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
-    "astro": "^1.9.0"
+    "astro": "^1.9.0",
+    "astro-analytics": "^2.5.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.2.4"
