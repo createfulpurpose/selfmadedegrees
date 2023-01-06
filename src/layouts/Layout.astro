@@ -25,9 +25,6 @@ const { title } = Astro.props;
 				<li>
 					<a href="/about">About</a>
 				</li>
-				<li>
-					<a href="/subjects">Subjects</a>
-				</li>
 			</ul>
 		</nav>
 
@@ -49,24 +46,24 @@ const { title } = Astro.props;
 		@apply font-regular bg-stone-100 leading-loose;
 	}
 	main {
-		@apply mx-auto py-12 px-20;
+		@apply mx-auto pt-16 pb-12 px-20;
 	}
 	nav {
-		@apply px-20 pt-8 pb-6;
+		@apply px-20 pt-8 pb-6 bg-white;
 		#logo {
 			@apply font-semibold;
 		}
 		ul {
 			@apply space-x-6;
 			li {
-				@apply inline-block border-b-2 border-stone-100 duration-700;
+				@apply inline-block border-b-2 border-white duration-700;
 				&:hover {
 					@apply border-stone-500;
 				}
 				a {
 					@apply border-0 text-black;
 					&:hover {
-						@apply bg-stone-100;
+						@apply bg-white;
 					}
 				}
 			}

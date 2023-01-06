@@ -10,11 +10,20 @@ const {frontmatter} = Astro.props;
     </article>
 </Layout>
 
-<style>
+<style is:global>
     article {
-        @apply w-3/5 mx-auto;
+        @apply w-3/5 mx-auto bg-white rounded-lg py-10 px-12;
         h1 {
             @apply text-4xl mb-6;
+        }
+        h2 {
+            @apply text-2xl mt-10 mb-6;
+        }
+        ul {
+            @apply ml-6;
+            li {
+                @apply list-disc pl-2;
+            }
         }
     }
     @media(max-width: theme("screens.md")) {
