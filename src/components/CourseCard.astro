@@ -1,0 +1,18 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="course-card">
+    <p class="title"><strong>{title}</strong></p>
+    <slot />
+</div>
+
+<style>
+    .course-card {
+        @apply rounded-lg border-2 border-stone-200 py-3 px-6;
+    }
+</style>
