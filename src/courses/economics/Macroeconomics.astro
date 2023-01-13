@@ -1,0 +1,56 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+---
+
+<CourseCard 
+    title="Macroeconomics"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Principles of Macroeconomics (CLEP)",
+                            url: "https://modernstates.org/course/principles-of-macroeconomics/",
+                            cost: "FREE"
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "UQx Macroeconomics",
+                            url: "https://www.edx.org/professional-certificate/uqx-macroeconomics",
+                            cost: "FREE"
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Macroeconomics - The Basics",
+                            url: "https://www.edx.org/course/macroeconomics-literacy",
+                            cost: "FREE"
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "AP Macroeconomics",
+                            url: "https://www.edx.org/course/ap-macroeconomics",
+                            cost: "FREE",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Macroeconomics: Challenging Concepts",
+                            url: "https://www.edx.org/course/ap-macroeconomics-challenging-concepts",
+                            cost: "FREE"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>
