@@ -1,0 +1,46 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+---
+
+<CourseCard 
+    title="General Chemistry I"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "General Chemistry I: Atoms, Molecules, and Bonding",
+                            url: "https://www.edx.org/course/atoms-molecules-and-bonding",
+                            cost: "FREE",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "OLI General Chemistry 1",
+                            url: "https://oli.cmu.edu/courses/general-chemistry-1-open-free/",
+                            cost: "FREE"
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            type: "lab",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "ChemCollective Virtual Labs",
+                            url: "https://chemcollective.org/vlabs",
+                            cost: "FREE",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>
