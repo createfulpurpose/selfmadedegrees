@@ -9,7 +9,7 @@ const { courses } = Astro.props;
 <div class="course">
     {courses.map(course => (
         <p class="title">
-            <span class="tag">{course.cost}</span>
+            <span class="tag">{course.cost ?? 'FREE'}</span>
             <a 
                 href={course.url}
                 target="_blank"
