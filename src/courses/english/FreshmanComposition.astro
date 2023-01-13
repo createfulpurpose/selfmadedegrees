@@ -1,0 +1,35 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+import Course from "../../components/Course.astro";
+---
+
+<CourseCard title="Freshman Composition">
+    <p>Choose a primary course.</p>
+    <Course
+        courses={[
+            {
+                title: "Preparing for the AP English Language and Composition Exam",
+                url: "https://www.edx.org/course/preparing-for-the-ap-english-language-and-composit",
+                cost: "FREE",
+            }
+        ]}
+    />
+    <Course
+        courses={[
+            {
+                title: "College Composition",
+                url: "https://modernstates.org/course/college-composition/",
+                cost: "FREE",
+            }
+        ]}
+    />
+    <Course
+        courses={[
+            {
+                title: "Academic English: Writing",
+                url: "https://www.coursera.org/specializations/academic-english",
+                cost: "PAID",
+            }
+        ]}
+    />
+</CourseCard>
