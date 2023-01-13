@@ -1,46 +1,55 @@
 ---
 import CourseCard from "../../components/CourseCard.astro";
-import Course from "../../components/Course.astro";
 ---
 
-<CourseCard title="Introduction to Biology">
-    <p>Choose a primary course.</p>
-    <Course
-        courses={[
-            {
-                title: "Biology (CLEP)",
-                url: "https://modernstates.org/course/biology/",
-                cost: "FREE",
-            }
-        ]}
-    />
-    <Course
-        courses={[
-            {
-                title: "Introduction to Biology - The Secret of Life",
-                url: "https://www.edx.org/course/introduction-to-biology-the-secret-of-life-3",
-                cost: "FREE",
-            }
-        ]}
-    />
-    <Course
-        courses={[
-            {
-                title: "Introduction to Biology: Ecology, Evolution, & Biodiversity",
-                url: "https://www.coursera.org/specializations/introduction-to-biology?",
-                cost: "PAID",
-            }
-        ]}
-    />
-
-    <p>Choose a lab course.</p>
-    <Course
-        courses={[
-            {
-                title: "Virtual Biology Labs",
-                url: "https://virtuallabs.merlot.org/vl_biology.html",
-                cost: "FREE",
-            }
-        ]}
-    />
-</CourseCard>
+<CourseCard 
+    title="Introduction to Biology"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Biology (CLEP)",
+                            url: "https://modernstates.org/course/biology/",
+                            cost: "FREE",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Introduction to Biology - The Secret of Life",
+                            url: "https://www.edx.org/course/introduction-to-biology-the-secret-of-life-3",
+                            cost: "FREE",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Introduction to Biology: Ecology, Evolution, & Biodiversity",
+                            url: "https://www.coursera.org/specializations/introduction-to-biology?",
+                            cost: "PAID",
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            type: "lab",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Virtual Biology Labs",
+                            url: "https://virtuallabs.merlot.org/vl_biology.html",
+                            cost: "FREE",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>

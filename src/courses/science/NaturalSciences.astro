@@ -1,17 +1,23 @@
 ---
 import CourseCard from "../../components/CourseCard.astro";
-import Course from "../../components/Course.astro";
 ---
 
-<CourseCard title="Natural Sciences">
-    <p>Choose a primary course.</p>
-    <Course
-        courses={[
-            {
-                title: "Natural Sciences (CLEP)",
-                url: "https://modernstates.org/course/natural-sciences/",
-                cost: "FREE",
-            }
-        ]}
-    />
-</CourseCard>
+<CourseCard 
+    title="Natural Sciences"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Natural Sciences (CLEP)",
+                            url: "https://modernstates.org/course/natural-sciences/",
+                            cost: "FREE",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>
