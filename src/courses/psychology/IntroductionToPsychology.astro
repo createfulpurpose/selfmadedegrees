@@ -1,0 +1,65 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+---
+
+<CourseCard 
+    title="Introduction to Psychology"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Introductory Psychology (CLEP)",
+                            url: "https://modernstates.org/course/introductory-psychology/",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "AP Psychology – Course 1: What is Psychology?",
+                            url: "https://modernstates.org/course/ap-psychology-course-1-what-is-psychology/",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Psychology – Course 2: How the Brain Works",
+                            url: "https://modernstates.org/course/ap-psychology-course-2-how-the-brain-works/",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Psychology – Course 3: How the Mind Works",
+                            url: "https://modernstates.org/course/ap-psychology-course-3-how-the-mind-works/",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Psychology – Course 4: How Behavior Works",
+                            url: "https://modernstates.org/course/ap-psychology-course-4-how-behavior-works/",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Psychology – Course 5: Health and Behavior",
+                            url: "https://modernstates.org/course/ap-psychology-course-5-health-and-behavior/",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Psychology – Course 6: Exam Preparation & Review",
+                            url: "https://modernstates.org/course/ap-psychology-course-6-exam-preparation-review/",
+                            junction: "(optional)"
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Introduction to Psychology",
+                            url: "https://www.coursera.org/learn/introduction-psych",
+                            cost: "PAID",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>
