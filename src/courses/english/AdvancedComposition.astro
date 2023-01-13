@@ -1,0 +1,32 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+---
+
+<CourseCard 
+    title="Advanced Composition"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "English Composition II (Saylor)",
+                            url: "https://learn.saylor.org/course/ENGL002",
+                            
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "English Composition II (Sophia)",
+                            url: "https://www.sophia.org/online-courses/english-and-communication/english-composition-ii",
+                            cost: "PAID",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>
