@@ -16,12 +16,20 @@ const { title, sections } = Astro.props;
             <p>
                 {sec.type == "primary" ? "Choose a primary course." : ''}
                 {sec.type == "lab" ? "Choose a lab course." : ''}
+                {sec.type == "prereq" ? <em>Make sure to complete the following prerequisites first:</em> : ''}
             </p>
-            {sec.courses.map(course => (
+            {sec.courses ? sec.courses.map(course => (
                 <Course
                     courses={course.cours}
                 />
-            ))}
+            )) : ''}
+            {sec.prereqs ? (
+                <ul class="prereqs">
+                    {sec.prereqs.map(preq => (
+                        <li>{preq}</li>
+                    ))}
+                </ul>
+            ) : ''}
         </>
     ))}
 </div>
@@ -34,6 +42,9 @@ const { title, sections } = Astro.props;
         }
         .title {
             @apply mt-0;
+        }
+        .prereqs {
+            @apply italic;
         }
     }
 </style>
