@@ -1,0 +1,48 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+
+export const title = "College Algebra"
+---
+
+<CourseCard 
+    title={title}
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "College Algebra (CLEP)",
+                            url: "https://modernstates.org/course/college_algebra/",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "College Algebra (Saylor)",
+                            url: "https://learn.saylor.org/course/view.php?id=24",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "College Algebra (edX)",
+                            url: "https://www.edx.org/course/college-algebra"
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "College Algebra and Problem Solving",
+                            url: "https://www.edx.org/course/college-algebra-and-problem-solving"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>
