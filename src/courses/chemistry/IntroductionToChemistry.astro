@@ -1,0 +1,43 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+---
+
+<CourseCard 
+    title="Introduction to Chemistry"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Chemistry (CLEP)",
+                            url: "https://modernstates.org/course/chemistry/",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Principles of Chemical Science",
+                            url: "https://ocw.mit.edu/courses/5-111sc-principles-of-chemical-science-fall-2014/",
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            type: "lab",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "ChemCollective Virtual Labs",
+                            url: "https://chemcollective.org/vlabs",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>

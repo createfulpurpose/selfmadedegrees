@@ -1,0 +1,51 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+---
+
+<CourseCard 
+    title="Overview of American History"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "The Great American Story: A Land of Hope",
+                            url: "https://online.hillsdale.edu/landing/the-great-american-story",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "American Heritage: From Colonial Settlement to the Current Day",
+                            url: "https://online.hillsdale.edu/landing/american-heritage",
+                            junction: "and",
+                        },
+                        {
+                            title: "American Citizenship and Its Decline",
+                            url: "https://online.hillsdale.edu/landing/american-citizenship-and-its-decline"
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "A Biography of America",
+                            url: "https://www.learner.org/series/a-biography-of-america/"
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Digital History",
+                            url: "http://www.digitalhistory.uh.edu/index.cfm"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>

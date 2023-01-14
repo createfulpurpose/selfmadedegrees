@@ -1,0 +1,44 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+import { title as AlgebraBasedPhysicsI } from "./AlgebraBasedPhysicsI.astro";
+---
+
+<CourseCard 
+    title="Algebra-Based Physics II"
+    sections={[
+        {
+            type: "prereq",
+            prereqs: [
+                AlgebraBasedPhysicsI,
+            ]
+        },
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "AP Physics 2 - Part 1: Fluids and Thermodynamics",
+                            url: "https://www.edx.org/course/ap-physics-2-part-1-fluids-and-thermodynamics",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Physics 2 - Part 2: Electricity and Magnetism",
+                            url: "https://www.edx.org/course/ap-physics-2-part-2-electricity-and-magnetism",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Physics 2 - Part 3: Optics and Modern Physics",
+                            url: "https://www.edx.org/course/ap-physics-2-part-3-optics-and-modern-physics",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Physics 2 - Part 4: AP Review and Exam Preparation",
+                            url: "https://www.edx.org/course/ap-physics-2-part-4-ap-review-and-exam-preparation",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>

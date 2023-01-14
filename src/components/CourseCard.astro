@@ -1,0 +1,50 @@
+---
+import Course from './Course.astro';
+
+export interface Props {
+	title: string;
+    sections: Array<object>;
+}
+
+const { title, sections } = Astro.props;
+---
+
+<div class="course-card">
+    <p class="title"><strong>{title}</strong></p>
+    {sections.map(sec => (
+        <>
+            <p>
+                {sec.type == "primary" ? "Choose a primary course." : ''}
+                {sec.type == "lab" ? "Choose a lab course." : ''}
+                {sec.type == "prereq" ? <em>Make sure to complete the following prerequisites first:</em> : ''}
+            </p>
+            {sec.courses ? sec.courses.map(course => (
+                <Course
+                    courses={course.cours}
+                />
+            )) : ''}
+            {sec.prereqs ? (
+                <ul class="prereqs">
+                    {sec.prereqs.map(preq => (
+                        <li>{preq}</li>
+                    ))}
+                </ul>
+            ) : ''}
+        </>
+    ))}
+</div>
+
+<style is:global>
+    .course-card {
+        @apply rounded-lg border-2 border-stone-200 py-3 px-6 mb-6;
+        & > p {
+            @apply mb-2 mt-4;
+        }
+        .title {
+            @apply mt-0;
+        }
+        .prereqs {
+            @apply italic;
+        }
+    }
+</style>

@@ -1,0 +1,59 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+---
+
+<CourseCard 
+    title="Macroeconomics"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Principles of Macroeconomics (CLEP)",
+                            url: "https://modernstates.org/course/principles-of-macroeconomics/",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "UQx Macroeconomics",
+                            url: "https://www.edx.org/professional-certificate/uqx-macroeconomics",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Macroeconomics - The Basics",
+                            url: "https://www.edx.org/course/macroeconomics-literacy",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "AP Macroeconomics",
+                            url: "https://www.edx.org/course/ap-macroeconomics",
+                            junction: "and"
+                        },
+                        {
+                            title: "AP Macroeconomics: Challenging Concepts",
+                            url: "https://www.edx.org/course/ap-macroeconomics-challenging-concepts",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Principles of Macroeconomics (Saylor)",
+                            url: "https://learn.saylor.org/course/view.php?id=9"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>

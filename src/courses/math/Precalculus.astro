@@ -1,0 +1,40 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+
+export const title = "Precalculus"
+---
+
+<CourseCard 
+    title={title}
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Prcalculus (CLEP)",
+                            url: "https://modernstates.org/course/precalculus/",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Precalculus (edX)",
+                            url: "https://www.edx.org/course/precalculus",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Discovery Precalculus: A Creative and Connected Approach",
+                            url: "https://www.edx.org/course/discovery-precalculus-a-creative-and-connected-app"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>

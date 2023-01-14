@@ -1,0 +1,39 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+import { title as FreshmanComposition } from "./FreshmanComposition.astro";
+---
+
+<CourseCard 
+    title="Advanced Composition"
+    sections={[
+        {
+            type: "prereq",
+            prereqs: [
+                FreshmanComposition,
+            ]
+        },
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "English Composition II (Saylor)",
+                            url: "https://learn.saylor.org/course/ENGL002",
+                            
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "English Composition II (Sophia)",
+                            url: "https://www.sophia.org/online-courses/english-and-communication/english-composition-ii",
+                            cost: "PAID",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>

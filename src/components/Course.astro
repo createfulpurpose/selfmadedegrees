@@ -1,0 +1,40 @@
+---
+export interface Props {
+    courses: Array<object>;
+}
+
+const { courses } = Astro.props;
+---
+
+<div class="course">
+    {courses.map(course => (
+        <p class="title">
+            <span class="tag">{course.cost ?? 'FREE'}</span>
+            <a 
+                href={course.url}
+                target="_blank"
+            >
+                {course.title}
+            </a>
+            <span class="junction">{course.junction ?? ''}</span>
+        </p>
+    ))}
+</div>
+
+<style>
+    .course {
+        @apply border-none bg-stone-100 text-black rounded-md mb-2 pt-2 pb-3 px-4 text-sm space-y-4;
+        .title {
+            @apply mb-0;
+            a {
+                @apply text-stone-900;
+            }
+            .tag {
+                @apply uppercase text-xs mr-1 py-1 px-2 bg-stone-50 duration-700;
+            }
+            .junction {
+                @apply italic ml-1;
+            }
+        }
+    }
+</style>

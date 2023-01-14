@@ -1,0 +1,32 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+---
+
+<CourseCard 
+    title="Cell Biology"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Cell Biology: Mitochondria",
+                            url: "https://www.edx.org/course/cell-biology-mitochondria",
+                            junction: "and",
+                        },
+                        {
+                            title: "Cell Biology: Cell-Cell Interactions",
+                            url: "https://www.edx.org/course/cell-biology-3",
+                            junction: "and",
+                        },
+                        {
+                            title: "Cell Biology: Transport and Signaling",
+                            url: "https://www.edx.org/course/cell-biology-transport",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>

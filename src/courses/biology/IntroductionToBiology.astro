@@ -1,0 +1,61 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+---
+
+<CourseCard 
+    title="Introduction to Biology"
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Biology (CLEP)",
+                            url: "https://modernstates.org/course/biology/",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Introduction to Biology - The Secret of Life",
+                            url: "https://www.edx.org/course/introduction-to-biology-the-secret-of-life-3",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Introduction to Molecular and Cellular Biology",
+                            url: "https://learn.saylor.org/course/view.php?id=349"
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Introduction to Biology: Ecology, Evolution, & Biodiversity",
+                            url: "https://www.coursera.org/specializations/introduction-to-biology?",
+                            cost: "PAID",
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            type: "lab",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Virtual Biology Labs",
+                            url: "https://virtuallabs.merlot.org/vl_biology.html",
+                            
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+/>

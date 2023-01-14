@@ -1,0 +1,49 @@
+---
+import CourseCard from "../../components/CourseCard.astro";
+
+export const title = "Freshman Composition"
+---
+
+<CourseCard 
+    title={title}
+    sections={[
+        {
+            type: "primary",
+            courses: [
+                {
+                    cours: [
+                        {
+                            title: "Preparing for the AP English Language and Composition Exam",
+                            url: "https://www.edx.org/course/preparing-for-the-ap-english-language-and-composit",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "College Composition",
+                            url: "https://modernstates.org/course/college-composition/",
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "English Composition I",
+                            url: "https://learn.saylor.org/course/view.php?id=43"
+                        }
+                    ]
+                },
+                {
+                    cours: [
+                        {
+                            title: "Academic English: Writing",
+                            url: "https://www.coursera.org/specializations/academic-english",
+                            cost: "PAID",
+                        }
+                    ]           
+                },
+            ]
+        }
+    ]}
+/>
