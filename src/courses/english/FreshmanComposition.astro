@@ -1,9 +1,11 @@
 ---
 import CourseCard from "../../components/CourseCard.astro";
+
+export const title = "Freshman Composition"
 ---
 
 <CourseCard 
-    title="Freshman Composition"
+    title={title}
     sections={[
         {
             type: "primary",
